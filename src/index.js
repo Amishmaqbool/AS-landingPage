@@ -1,12 +1,36 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import styled from 'styled-components';
+import Heeder from './Components/Header';
+import SectionOne from './Components/Section_1';
+import SectionTwo from './Components/Section_2';
+import SectionThree from './Components/Section_3';
+import Footer from './Components/Footer';
+
+const Container = styled.div`
+display: flex;
+justify-content: center;
+flex-flow:column;
+align-items: center;
+
+`;
+
+
+
+function App(){
+
+    return(
+        <Container>
+            <Heeder/>
+            <SectionOne/>
+            <SectionTwo/>
+            <SectionThree/>
+            <Footer/>
+        </Container>
+
+    );
+}
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+
